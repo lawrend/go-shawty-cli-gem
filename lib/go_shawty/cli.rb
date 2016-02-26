@@ -99,10 +99,11 @@ class GoShawty::CLI
 
   def generate_lyric
     puts "\nOkay.  Here's your 50 Cent Lyric that will guide you in your celebration:\n*****pretend he wrote it just for you*****"
-    GoShawty::Lyric.new
-
-    puts "\n\n       (Lyric)\n"
-    puts "Source: Song Name"
+    bday_lyric = GoShawty::Lyric.new
+    puts"#{bday_lyric.song_name}\n"
+    puts "#{bday_lyric.album_name}\n"
+    puts "\n\n#{bday_lyric.lines}\n"
+    
   end
 
   def list_celebrities
