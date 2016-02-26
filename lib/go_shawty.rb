@@ -1,5 +1,9 @@
-require "go_shawty/version"
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
-module GoShawty
-  # Your code goes here...
-end
+
+require_relative "./go_shawty/version"
+require_relative "./go_shawty/cli"
+require_relative "./go_shawty/celebrity"
+require_relative "./go_shawty/lyric"

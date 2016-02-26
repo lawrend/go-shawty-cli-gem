@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+
+require "bundler/setup"
+require "go_shawty"
+
+GoShawty::CLI.new.call
