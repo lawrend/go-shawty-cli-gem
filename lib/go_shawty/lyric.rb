@@ -24,10 +24,10 @@ class GoShawty::Lyric
       lyric_array = [0,1,2,3,4,5,6]
     when 4
       url = "http://www.allthelyrics.com/lyrics/50_cent/pimp_radio_edit-lyrics-899432.html"
-      lyric_array = [0,1,3,5,7]
+      lyric_array = [1,2,4,5,7]
     when 5
       url = "http://www.allthelyrics.com/lyrics/50_cent/just_a_lil_bit_radio-lyrics-1158816.html"
-      lyric_array = [0,1,2,3,4,5,6]
+      lyric_array = [0,1,2,3,4,6,8]
     when 6
       url = "http://www.allthelyrics.com/lyrics/50_cent/if_i_cant_clean_version-lyrics-559991.html"
       lyric_array = [0,1,2,3,4,5,6,7,8,9]
@@ -39,5 +39,4 @@ class GoShawty::Lyric
     @album_name = scraped_lyrics.css("div.content-text-album").text
   end
 
-
-  end
+end
