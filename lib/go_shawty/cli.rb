@@ -131,32 +131,33 @@ class GoShawty::CLI
   #####--GIVING USER A LIST OF CELEBS--#####
 
   def list_celebrities
-    celebrity_array = []
     if month == "july" && day == "6"
       curtis
     else
-      celebrity_array = GoShawty::CelebrityScraper.scrape_bday_page(month, day)
-      puts "\nAnd here are the celebrities who share your birthday!  Celebrate together!  Sing the lyric!!!\n"
-      generate_list(celebrity_array)
+      puts "\nAnd here are the celebrities who share your birthday!  Celebrate together!  Sing the lyric TOGETHER!!!\n"
+      generate_list
+    end
+  end
+
+  def generate_list
+    array = GoShawty::CelebrityScraper.scrape_bday_page(month, day)
+    counter = 1
+    array.each do |i|
+      puts "#{counter}. #{i[:name]} born in #{i[:year]} - #{i[:desc]}\n"
+      counter += 1
     end
     puts "\n** Select the number of any person you'd like to learn more about, or you can pick a (D)ifferent date, or you can (E)xit and head to da club."
     input = gets.strip
 
     if /d/i === input
       self.call
-    elsif input.to_i <= celebrity_array.length
-      more_info(input.to_i, celebrity_array)
+    elsif /e/i === input
+      goodbye
+    elsif input.to_i <= array.length
+      more_info(input.to_i, array)
     else
       goodbye
     end 
-  end
-
-  def generate_list(array)
-    counter = 1
-    array.each do |i|
-      puts "#{counter}. #{i[:name]} born in #{i[:year]} - #{i[:desc]}\n"
-      counter += 1
-    end
   end
 
 #####--GIVE MORE INFO ABOUT CELEB--#####
@@ -238,6 +239,8 @@ class GoShawty::CLI
                                         .......,..,:...........,,7I,..............,......,,.,.......
                                         .....,,..:I...........,~?,,,,.............,....,...:........"
 
+    puts "\n...and if you need to know who else..."
+    generate_list
   end
 
   def goodbye

@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Celebrity Birthdays and a Random 50 Cent Lyric"
   spec.description   = "Enter your birthday and get info on some celebrities who share that bday, the celebrate with a 50 Cent lyric.  Huzzah!"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/lawrend/go-shawty-cli-gem"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
