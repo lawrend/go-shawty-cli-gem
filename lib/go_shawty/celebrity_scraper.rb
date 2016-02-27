@@ -1,5 +1,4 @@
 class GoShawty::CelebrityScraper
-  attr_accessor :age, :born, :died, :birthplace, :known, :bio
 
   def self.scrape_bday_page(month, day)
     url = "http://www.who2.com/born-on/#{month}-#{day}/?drupal_photo=true#"

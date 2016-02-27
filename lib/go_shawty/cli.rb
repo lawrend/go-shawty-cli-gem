@@ -20,57 +20,44 @@ class GoShawty::CLI
     puts "5. May            11. Nov"
     puts "6. June           12. Dec"
 
-    @day_count = 0
 
     input = gets.strip
     case input
     when "1"
       @month = "january"
-      @day_count = 0
       thirty_one_day_input
     when "2"
       @month = "february"
-      @day_count = 31
       feb_day_input
     when "3"
       @month = "march"
-      @day_count = 60
       thirty_one_day_input
     when "4"
       @month = "april"
-      @day_count = 91
       thirty_day_input
     when "5"
       @month = "may"
-      @day_count = 121
       thirty_one_day_input
     when "6"
       @month = "june"
-      @day_count = 152
       thirty_day_input
     when "7"
       @month = "july"
-      @day_count = 182
       thirty_one_day_input
     when "8"
       @month = "august"
-      @day_count = 213
       thirty_one_day_input
     when "9"
       @month = "september"
-      @day_count = 244
       thirty_day_input
     when "10"
       @month = "october"
-      @day_count = 274
       thirty_one_day_input
     when "11"
       @month = "november"
-      @day_count = 305
       thirty_day_input
     when "12"
       @month = "december"
-      @day_count = 335
       thirty_one_day_input
     else
       puts "Say what now?"
