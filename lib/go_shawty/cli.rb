@@ -1,5 +1,5 @@
 class GoShawty::CLI
-  attr_accessor :day_count, :month, :day
+  attr_accessor :month, :day
 
   def call
     puts "\n*** A Celebrity Birthday & A Curtis Jackson Lyric ***\n\n          -----What more do you need?-----\n\n"
@@ -70,7 +70,6 @@ class GoShawty::CLI
     input = gets.to_i
     if input < 32 && input > 0
       @day = input.to_s
-      @day_count += input
     else 
       puts "Can you do that again for me?"
       thirty_one_day_input
@@ -82,7 +81,6 @@ class GoShawty::CLI
     input = gets.to_i
     if input <31 && input > 0
       @day = input.to_s
-      @day_count += input
     else 
       puts "Can you do that again for me?"
       thirty_day_input
@@ -94,7 +92,6 @@ class GoShawty::CLI
     input = gets.to_i
     if input < 30 && input > 0
       @day = input.to_s
-      @day_count += input
     else
       puts "Can you do that again for me?"
       feb_day_input
