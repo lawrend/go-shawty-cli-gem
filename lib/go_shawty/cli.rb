@@ -59,6 +59,8 @@ class GoShawty::CLI
     when "12"
       @month = "december"
       thirty_one_day_input
+    when "exit"
+      goodbye
     else
       puts "Say what now?"
       date_input
