@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.license       = "MIT"
 
 
-  s.files         = ["lib/go_shawty.rb", "lib/go_shawty/celebrity_maker.rb", "lib/go_shawty/celebrity_scraper.rb", "lib/go_shawty/cli.rb", "lib/go_shawty/lyric.rb", "config/environment.rb"]
+  s.files         = ["lib/go_shawty/version.rb", "lib/go_shawty.rb", "lib/go_shawty/celebrity_maker.rb", "lib/go_shawty/celebrity_scraper.rb", "lib/go_shawty/cli.rb", "lib/go_shawty/lyric.rb", "config/environment.rb"]
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
   s.add_dependency "bundler", "~> 1.10"
