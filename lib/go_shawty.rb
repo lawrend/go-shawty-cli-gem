@@ -1,10 +1,4 @@
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
+module GoShawty
+end
 
-
-require_relative "./go_shawty/version"
-require_relative "./go_shawty/cli"
-require_relative "./go_shawty/celebrity_scraper"
-require_relative "./go_shawty/celebrity_maker"
-require_relative "./go_shawty/lyric"
+require_relative '../config/environment'

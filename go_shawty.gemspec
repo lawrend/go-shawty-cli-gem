@@ -6,7 +6,7 @@ require 'go_shawty/version'
 Gem::Specification.new do |spec|
   spec.name          = "go_shawty"
   spec.version       = GoShawty::VERSION
-  spec.authors       = ["lawrend"]
+  spec.authors       = ["Douglas Lawrence"]
   spec.email         = ["douglaslawrence314@gmail.com"]
 
   spec.summary       = "Celebrity Birthdays and a Random 50 Cent Lyric"
@@ -15,10 +15,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.files         = ["lib/go_shawty.rb", "lib/go_shawty/celebrity_maker.rb", "lib/go_shawty/celebrity_scraper.rb", "lib/go_shawty/cli.rb", "lib/go_shawty/lyric.rb"]
+  spec.executables   << 'go_shawty'
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
