@@ -5,8 +5,7 @@ class GoShawty::CLI
     puts "\n*** A Celebrity Birthday & A Curtis Jackson Lyric ***\n\n          -----What more do you need?-----\n\n"
     puts "Let's go, shawty, and find out who was born on ya birthday."
     date_input
-    #generate_lyric
-    #list_celebrities
+    
   end
 
 #####--GETTING THE USER BIRTHDAY--#####
@@ -114,19 +113,15 @@ class GoShawty::CLI
       puts"Song: #{bday_lyric.song_name}\n"
       puts "#{bday_lyric.album_name}\n"
       puts "\n\n#{bday_lyric.lines}\n"
+      list_celebrities
     end
-    list_celebrities
   end
 
   #####--GIVING USER A LIST OF CELEBS--#####
 
   def list_celebrities
-    if month == "july" && day == "6"
-      curtis
-    else
       puts "\nAnd here are the celebrities who share your birthday!  Celebrate together!  Sing the lyric TOGETHER!!!\n"
       generate_list
-    end
   end
 
   def generate_list
@@ -140,7 +135,7 @@ class GoShawty::CLI
     input = gets.strip
 
     if /d/i === input
-      self.call
+      self.date_input
     elsif /e/i === input
       goodbye
     elsif input.to_i <= array.length
@@ -181,6 +176,7 @@ class GoShawty::CLI
     puts "\n\nYou have the birthday of all birthdays. You share a birthday with Curtis Jackson. So sing with me now..."
     puts"--------------------------------------------------------------------------------------------------------------------"
     puts "#{sing_along}"
+    curtis
   end
 
   def curtis
