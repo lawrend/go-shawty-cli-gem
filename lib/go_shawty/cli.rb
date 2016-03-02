@@ -5,8 +5,8 @@ class GoShawty::CLI
     puts "\n*** A Celebrity Birthday & A Curtis Jackson Lyric ***\n\n          -----What more do you need?-----\n\n"
     puts "Let's go, shawty, and find out who was born on ya birthday."
     date_input
-    generate_lyric
-    list_celebrities
+    #generate_lyric
+    #list_celebrities
   end
 
 #####--GETTING THE USER BIRTHDAY--#####
@@ -72,6 +72,7 @@ class GoShawty::CLI
     input = gets.to_i
     if input < 32 && input > 0
       @day = input.to_s
+      generate_lyric
     else 
       puts "Can you do that again for me?"
       thirty_one_day_input
@@ -83,6 +84,7 @@ class GoShawty::CLI
     input = gets.to_i
     if input <31 && input > 0
       @day = input.to_s
+      generate_lyric
     else 
       puts "Can you do that again for me?"
       thirty_day_input
@@ -94,6 +96,7 @@ class GoShawty::CLI
     input = gets.to_i
     if input < 30 && input > 0
       @day = input.to_s
+      generate_lyric
     else
       puts "Can you do that again for me?"
       feb_day_input
@@ -112,6 +115,7 @@ class GoShawty::CLI
       puts "#{bday_lyric.album_name}\n"
       puts "\n\n#{bday_lyric.lines}\n"
     end
+    list_celebrities
   end
 
   #####--GIVING USER A LIST OF CELEBS--#####
@@ -162,7 +166,7 @@ class GoShawty::CLI
     if /p/i === input
       list_celebrities
     elsif /d/i === input
-      self.call
+      self.date_input
     else
       goodbye
     end
