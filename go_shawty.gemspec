@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
 
   spec.files         = ["lib/go_shawty.rb", "lib/go_shawty/celebrity_maker.rb", "lib/go_shawty/celebrity_scraper.rb", "lib/go_shawty/cli.rb", "lib/go_shawty/lyric.rb"]
-  spec.executables   << 'go_shawty'
+  spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
